@@ -1,0 +1,386 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	overflow-x:  hidden;
+}
+
+$pink: #f94284;
+$blue : #364bb6;
+
+p{
+	font-size: 16.5px;
+	line-height: 1.8;
+}
+.btn {
+	border-radius: 25px;
+	padding: 5px 25px;
+	line-height: 1;
+	text-transform: uppercase;
+	font-size: 15px;
+	margin: 10px 0;
+	&.btn-xl{
+		font-size: 19px;
+		font-weight: 100;
+		padding: 15px 25px;
+		border-radius: 40px;
+
+	}
+	&.pink-bg {
+		color: #fff;
+		background-color: $pink;
+	}
+	&.pink {
+		color: $pink;
+		border: 1px solid $pink;
+		&:hover {
+			color: #fff;
+			background-color: $pink;
+		}
+	}
+}
+header {
+	margin-bottom: 30px;
+	background: #1e50b1;
+	color: white;
+	padding: 10px 15px;
+	.navbar-default .navbar-toggle {
+		background-color: #fff;
+		margin-right: 0;
+	}
+	.navbar-default {
+		background-color: transparent;
+		border: none;
+		margin: 0;
+		* {
+			color: #fff;
+		}
+
+		.dropdown-menu>li>a {
+			color: #333 !important;
+		}
+		.navbar-nav>li>a {
+			color: #fff;
+			font-size: 17px;
+			letter-spacing: 2px;
+
+		}
+	}
+
+	.nav.navbar-nav.phone a{
+		font-size: 28px;
+		font-weight: 700;
+	}
+	.navbar-brand {
+		line-height: 40px;
+		padding: 0;
+	}
+
+}
+.main-wrapper {
+	max-width: 1115px;
+	margin: 0 auto;
+	.product-container {
+		margin-bottom: 40px;
+		@media (max-width: 767px) { 
+			text-align: center;
+			margin-top: 15px;
+			.ammount{
+				display: inline-block;
+				margin: 0 auto;
+
+			}}
+		.title {
+			font-weight: 800;
+			color: #404040;
+			font-size: 30px;
+			line-height: 1.3;
+			margin: 0  0 30px 0;
+		}
+		.cat-prod {
+			font-weight: 700;
+		}
+		.ammount {
+			width: 155px;
+			margin-bottom: 50px;
+			input {
+				border-left: none;
+				border-right: none;
+			}
+			span {
+				button {
+					
+					margin: 0;	
+					padding: 0;
+					width: 35px;
+					height: 34px;
+					line-height: 22px;
+					background-color: #efefef;
+				}
+			}
+
+		}
+		.price{
+			display: block;
+			color: $pink;
+			font-size: 32px;
+			font-weight: 700;
+		}
+		select {
+			border-radius: 5px;
+			max-width: 335px;
+			width: 100%;
+			padding: 7px 10px;
+		}
+
+	}
+}
+.bread {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+	font-size: 12px;
+	color: #959595;
+}
+.feature {
+	border-bottom: 1px solid #ccc;
+	h4{
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	ul{
+		padding: 0;
+		li {
+			color: $blue;
+			font-size: 17px;
+			list-style: none;
+			margin: 12px 0px;
+		}
+	}
+}
+.container-fluid.related,.tabs .container-fluid,.tabs .tab-content {
+	max-width: 835px;
+	margin: 0 auto;
+}
+.tabs {
+	margin-top:65px;
+	.nav-tabs {
+		border-bottom: none;
+		text-align: center;
+		position: relative;
+		margin-bottom: 90px;
+		&:after {
+			content:"";
+			background-color: #ccc;
+			height: 2px;
+			width: 1000%;
+			left: -500%;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+	.nav-tabs>li {
+		float: none;
+		display: inline-block;
+	}
+	.nav-tabs>li>a{
+		font-weight: 700;
+		font-size: 22px;
+		color: #5e5e5e;
+		letter-spacing: 1px;
+		border: none;
+		&:hover,&:focus {
+			background-color: transparent;
+			border: none;
+			color: $blue;
+			&:after {
+				content:"";
+				background-color: $blue;
+				height: 3px;
+				z-index: 10;
+				width: 100%;
+				left: 0%;
+				position: absolute;
+				bottom: 1px;
+			}
+		}
+	.tab-content {
+		padding-top:90px;
+	}
+	}
+	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+		border: none;
+		color: $blue;
+		background-color: transparent;
+			&:after {
+				content:"";
+				background-color: $blue;
+				height: 3px;
+				z-index: 10;
+				width: 100%;
+				left: 0%;
+				position: absolute;
+				bottom: 1px;
+			}
+	}
+}
+.related-products{ 
+	margin: 50px auto 0 auto;
+	img{
+		width: 100%;
+	}
+	.related-item {
+		max-width: 235px;
+		@media (max-width: 767px) { 
+			max-width: 100%;}
+		.price {
+			display: block;
+			color: $pink;
+			margin-bottom: 10px;
+		}
+		.wrapper{
+		border-right: 1px solid #f8f8f8;
+		border-left: 1px solid #f8f8f8;
+		border-bottom: 2px solid #eeeeee;
+		padding: 0 15px 15px 15px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		}
+	}
+}
+
+footer {
+	background: #202020;
+	padding: 60px 0 0 0;
+	color: #ebebeb;
+	margin-top: 90px;
+
+	.inner {
+		max-width: 1055px;
+		margin: 0 auto;
+		&.section-one{
+		padding: 0 0 20px 0; 
+		border-bottom: 1px solid #191919;
+			@media (max-width: 767px) { 
+				.logo-footer {
+					display: inline-block;
+					margin: 0 auto;
+				}
+				*{
+				text-align: center;
+				}
+	   		}
+		}
+	}
+	.social {
+		text-align: right;
+		.social-list {
+			position: relative;
+			display: block;
+		}
+
+		.social-list li {
+			position: relative;
+			margin-right: 15px;
+			font-size: 18px;
+			display: inline-block;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+   	.title-widget {
+   		font-weight: 700;
+   		position: relative;
+   		line-height: 1;
+   		padding-bottom: 10px;
+   		margin-top: 30px;
+   		&:before {
+   			width: 107px;
+   			height: 2px;
+   			background-color: #193f94;
+   			content:"";
+   			display: block;
+   			position: absolute;
+   			bottom: 0px;
+   		}
+   		&:after {
+   			width: 214px;
+   			height: 2px;
+   			background-color: #193f94;
+   			content:"";
+			display: block;
+   			position: absolute;
+			bottom: -4px;
+   		}
+   	}
+   	ul{
+   		margin: 0;
+   		padding: 0;
+   		li{
+   			list-style: none;
+			margin: 12px 0px;
+			a {
+				color: #fafafa;
+				&:hover {
+					color: $blue;
+					text-decoration: none;
+				}
+			}
+   		}
+   	}
+
+   	.copy-footer {
+   		width: 100%;
+   		margin-top: 60px;
+   		padding: 15px 0;
+   		background-color: #1c1c1c;
+   		@media (max-width: 767px) { 
+   			*{
+   				text-align: center !important;
+   			}
+   		}
+   		p {
+   			line-height: 45px;
+   		}
+   		.apps-footer {
+   			text-align: right;
+   		}
+   	}
+}
+
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
